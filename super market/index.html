@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="logo">
+            <h1>SuperMarket<span>Recs</span></h1>
+            <p>Personalized shopping recommendations</p>
+        </div>
+        
+        <div class="form-container">
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <h2>Welcome Back!</h2>
+                <div class="form-group">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="button" class="btn-primary" onclick="login()">Login</button>
+                <div class="toggle-form">
+                    New to SuperMarketRecs? <a onclick="showSignUp()">Create account</a>
+                </div>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <input type="tel" id="signupMobile" placeholder="Mobile Number" required>
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="signupUsername" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="signupPassword" placeholder="Password (min 6 chars)" required>
+                    <i class="fas fa-lock"></i>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="button" class="btn-primary" onclick="signUp()">Sign Up</button>
+                <div class="toggle-form">
+                    Already have an account? <a onclick="showLogin()">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
